@@ -8,7 +8,7 @@ import './login-register.styles.scss'
 export default class LoginregisterPage extends Component {
   render() {
     return (
-      <div>
+      <div className='sign-in-and-sign-up'>
         <Signin />
         <Signup />
       </div>
