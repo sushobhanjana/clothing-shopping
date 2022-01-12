@@ -49,7 +49,7 @@ export default class Signin extends Component {
                     handleChange={this.handleChange} />
                 <div className='buttons'>
                     <CustomButton type='submit'>Sign in</CustomButton>
-                    <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
+                    <CustomButton type='button' onClick={signInWithGoogle} isGoogleSignIn>
                         Sign in wih Google
                     </CustomButton>
                 </div>
