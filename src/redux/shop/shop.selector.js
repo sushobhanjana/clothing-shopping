@@ -2,9 +2,17 @@ import { createSelector } from "reselect";
 
 const selectshopstate = state => state.shop;
 
-const selectshop = createSelector(
+export const selectshop = createSelector(
     [selectshopstate],
     shop => shop.shopdata    
 )
 
-export default selectshop;
+export const selectshopPreview = createSelector(
+    [selectshop],
+    shop => Object.keys(shop).map(key => shop[key]) 
+)
+
+export const selectCollection = collectionUrlparam => createSelector(
+    [selectshop],
+    shop => shop[collectionUrlparam]
+)
